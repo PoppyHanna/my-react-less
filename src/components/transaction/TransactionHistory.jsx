@@ -13,7 +13,7 @@ const Transaction = ({ type, amount, currency }) => {
 const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.table}>
-      <thead>
+      <thead >
         <tr>
           <th className={styles.header}>Type</th>
           <th className={styles.header}>Amount</th>
