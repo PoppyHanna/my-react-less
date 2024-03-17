@@ -5,26 +5,26 @@ const Profile = ({ name, tag, location, image, stats }) => {
   const { followers, views, likes } = stats;
 
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={styles.profile}>
+      <div className={styles.info}>
+        <img className={styles.avatar} src={image} alt="User avatar" />
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={styles.stats}>
+        <li className={styles.text}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={styles.number}>{followers}</span>
         </li>
-        <li>
+        <li className={styles.text}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={styles.number}>{views}</span>
         </li>
-        <li>
+        <li className={styles.text}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={styles.number}>{likes}</span>
         </li>
       </ul>
     </div>
