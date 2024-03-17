@@ -5,6 +5,10 @@ import './App.css'
 import Product from './Product';
 import Profile from './profile/Profile';
 import userData from './userData.json';
+import friends from './friends.json';
+import Friend from './friend/Friend';
+import transactions from './transactions.json';
+import TransactionHistory from './transaction/TransactionHistory'
 
 // src/components/App.jsx
 
@@ -23,7 +27,8 @@ export default function App() {
         imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
         price={14.29}
       />
- <Profile
+
+      <Profile
         name={userData.username}
         tag={userData.tag}
         location={userData.location}
@@ -31,6 +36,12 @@ export default function App() {
         stats={userData.stats}
       />
 
+
+       {friends.map((friend) => (
+        <Friend key={friend.id} {...friend} />
+      ))}
+    
+      <TransactionHistory items={transactions} />
 
     </div>
   );

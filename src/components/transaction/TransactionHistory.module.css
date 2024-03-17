@@ -1,0 +1,24 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+}
+
+.header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: left;
+}
+
+.cell {
+  padding: 10px;
+}
+
+.cell:first-child {
+  text-transform: capitalize;
+}
